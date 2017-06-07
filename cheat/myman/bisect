@@ -1,0 +1,28 @@
+bisect是python的一个排序模块，全称Bisection，提供了insort,insort_left,insort_right,bisect,bisect_left,bisect_right
+
+
+biset中的函数参数均为(a, x, lo=0, hi=None),a为一个序列，x为要插入或者查找的值，lo和hi是两个可选参数，lo默认为0，hi默认为none，如果为none的话，在函数的实现中将会被赋予len(a)的值
+lo和hi可以限制查找a的起始位置和结束位置。
+
+
+import bisect
+#要求序列必须是有序的
+data = [2,4,7,9]
+#insort函数，插入一个值，保持原序列有序，如果已经存在这个值，将会把这个值插入到后面
+#插入一个不存在的值
+bisect.insort(data, 3)#[2, 3, 4, 7, 9]
+data = [2, 4, 7, 9]
+
+
+#bisect函数，查找该值将会插入的位置并返回，如果值存在的话，将会返回等于该值的下个索引的位置
+
+#print bisect.bisect(data, 2)# 1
+data = [2,2,2,4,7,9]
+
+# #bisect_left 和 bisect_right 函数，该函数用入处理将会插入重复数值的情况，返回将会插入的位置,如果重复的数据的个数比较多，以第一个为主
+#print bisect.bisect_left(data, 2)#0
+
+#insort_left和insort_right函数，该函数用于处理重复数据是，将插入的值插入左边还是右边
+data = [2,4,7,9]
+bisect.insort_left(data, 2)
+print data#[2,2,4,7,9]
