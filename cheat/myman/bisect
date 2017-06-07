@@ -1,9 +1,11 @@
 bisect是python的一个排序模块，全称Bisection，提供了insort,insort_left,insort_right,bisect,bisect_left,bisect_right
 
 
-biset中的函数参数均为(a, x, lo=0, hi=None),a为一个序列，x为要插入或者查找的值，lo和hi是两个可选参数，lo默认为0，hi默认为none，如果为none的话，在函数的实现中将会被赋予len(a)的值
+bisect中的函数参数均为(a, x, lo=0, hi=None),a为一个序列，x为要插入或者查找的值，lo和hi是两个可选参数，lo默认为0，hi默认为none，如果为none的话，在函数的实现中将会被赋予len(a)的值
 lo和hi可以限制查找a的起始位置和结束位置。
 
+
+bisect其实就是bisect_right的一个别名
 
 import bisect
 #要求序列必须是有序的
