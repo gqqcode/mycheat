@@ -17,9 +17,9 @@ export EDITOR=/usr/bin/vim
 export DEFAULT_CHEAT_DIR='{0}'
 """.format(cheat_dir)
 
-with open("~/.bashrc", "a") as f:
+with open("~/.bash_profile", "a") as f:
     f.write(content)
-commands.getoutput("source ~/.bashrc")
+commands.getoutput("source ~/.bash_profile")
 print("set env ok!")
 
 
